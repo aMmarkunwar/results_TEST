@@ -3,15 +3,15 @@ var csvData = {}; // Global object to store CSV data
 // Function to load all CSV data files
 function loadAllCSVFiles() {
     var csvURLs = [
-        "https://raw.githubusercontent.com/aMmarkunwar/resultDot/main/resultDOT/semester1_results.csv",
-        "https://raw.githubusercontent.com/aMmarkunwar/resultDot/main/resultDOT/semester2_results.csv",
-        "https://raw.githubusercontent.com/aMmarkunwar/resultDot/main/resultDOT/semester3_results.csv",
-        "https://raw.githubusercontent.com/aMmarkunwar/resultDot/main/resultDOT/semester4_results.csv",
-        "https://raw.githubusercontent.com/aMmarkunwar/resultDot/main/resultDOT/semester5_results.csv",
-        "https://raw.githubusercontent.com/aMmarkunwar/resultDot/main/resultDOT/semester6_results.csv",
-        "https://raw.githubusercontent.com/aMmarkunwar/resultDot/main/resultDOT/semester7_results.csv",
-        "https://raw.githubusercontent.com/aMmarkunwar/resultDot/main/resultDOT/semester8_results.csv"
-    ];
+        "https://raw.githubusercontent.com/aMmarkunwar/results_TEST/main/semester1_results.csv",
+        "https://raw.githubusercontent.com/aMmarkunwar/results_TEST/main/semester2_results.csv",
+        "https://raw.githubusercontent.com/aMmarkunwar/results_TEST/main/semester3_results.csv",
+        "https://raw.githubusercontent.com/aMmarkunwar/results_TEST/main/semester4_results.csv",
+        "https://raw.githubusercontent.com/aMmarkunwar/results_TEST/main/semester5_results.csv",
+        "https://raw.githubusercontent.com/aMmarkunwar/results_TEST/main/semester6_results.csv",
+        "https://raw.githubusercontent.com/aMmarkunwar/results_TEST/main/semester7_results.csv",
+        "https://raw.githubusercontent.com/aMmarkunwar/results_TEST/main/semester8_results.csv"
+        ;
 
     // Use Promise.all to fetch and parse all CSV files concurrently
     Promise.all(csvURLs.map(fetchAndParseCSV))
