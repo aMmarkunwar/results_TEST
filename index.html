@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="webpage">
+        <div class="phone-container">
+            <div class="screen">
+                <div class="container">
+                    <h1>Data Search</h1>
+                    <div class="search-container rounded-box">
+                        <div class="input-container">
+                            <label for="semesterSelect">Select Semester:</label>
+                            <select id="semesterSelect">
+                                <option value="1">Semester 1</option>
+                                <option value="2">Semester 2</option>
+                                <option value="3">Semester 3</option>
+                                <option value="4">Semester 4</option>
+                                <option value="5">Semester 5</option>
+                                <option value="6">Semester 6</option>
+                                <option value="7">Semester 7</option>
+                                <option value="8">Semester 8</option>
+                            </select>
+                        </div>
+                        <div class="input-container">
+                            <label for="searchInput">Enter Roll Number:</label>
+                            <input type="number" id="searchInput" placeholder="Roll Number">
+                        </div>
+                        <button onclick="searchAndDisplay()">Search</button>
+                    </div>
+                    
+                    <!-- Add space and a paragraph below the search button -->
+                    <div class="additional-content">
+                        <p></p>
+                    </div>
+                    
+                    <div id="tableContainer" class="result-table rounded-box hidden">
+                        <table id="resultTable"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

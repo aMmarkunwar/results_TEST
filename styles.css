@@ -1,0 +1,128 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Webpage container styles */
+.webpage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff; /* Webpage background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
+
+/* Phone frame styles */
+.phone-container {
+    position: relative;
+    background-color: #ffffff;
+    width: 80vw;
+    max-width: 400px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+/* Phone screen styles */
+.screen {
+    background-color: #e1e1e18c;
+    border-radius: 20px;
+    height: 80vh; /* Adjusted height to create space at the top and bottom */
+    overflow: auto;
+    margin: 10vh 0; /* Margin added to push down from the top and up from the bottom */
+}
+
+/* Main container styles */
+.container {
+    padding: 20px;
+}
+
+/* Input container styles */
+.input-container {
+    margin-bottom: 15px;
+}
+
+/* Button styles */
+button {
+    background-color: #008000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Additional content styles */
+.additional-content {
+    margin-top: 20px;
+}
+
+.additional-content p {
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.5;
+}
+
+/* Table styles */
+#resultTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 15px; /* Add rounded corners to the table */
+    overflow: hidden; /* Hide overflow content */
+}
+
+#resultTable th,
+#resultTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left; /* Left-align table content */
+}
+
+#resultTable tr:first-child {
+    background-color: #008000; /* Set background color to green for the first row */
+    color: white; /* Set text color to white for the first row */
+}
+
+/* Center-align numbers */
+#resultTable td:nth-child(2),
+#resultTable td:nth-child(3) {
+    text-align: center;
+}
+
+/* New style to display the table in a vertical order */
+#resultTable td {
+    display: block;
+}
+
+#resultTable tr {
+    margin-bottom: 10px;
+}
+
+/* Add this CSS to your existing styles.css file */
+
+/* Header and Label styles */
+h1{
+    color: #000000;
+    margin-bottom: 10px; /* Optional: Adjust margin as needed */
+}
+label {
+    color: green;
+    }
+
+/* Bold labels */
+label {
+    font-weight: bold;
+}
+
+/* Button styles */
+button {
+    color: white;
+    background-color: #0080000;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
