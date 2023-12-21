@@ -1,4 +1,5 @@
-var csvData = {}; // Global object to store CSV data
+// Global object to store CSV data
+var csvData = {};
 
 // Function to load all CSV data files
 function loadAllCSVFiles() {
@@ -11,7 +12,7 @@ function loadAllCSVFiles() {
         "https://raw.githubusercontent.com/aMmarkunwar/results_TEST/main/semester6_results.csv",
         "https://raw.githubusercontent.com/aMmarkunwar/results_TEST/main/semester7_results.csv",
         "https://raw.githubusercontent.com/aMmarkunwar/results_TEST/main/semester8_results.csv"
-        ;
+    ];
 
     // Use Promise.all to fetch and parse all CSV files concurrently
     Promise.all(csvURLs.map(fetchAndParseCSV))
@@ -29,13 +30,17 @@ function loadAllCSVFiles() {
 // Function to fetch and parse a CSV file
 function fetchAndParseCSV(csvURL) {
     return new Promise(function (resolve, reject) {
-        Papa.parse(csvURL, {
-            header: true,
-            download: true,
-            skipEmptyLines: true,
-            complete: resolve,
-            error: reject
-        });
+        fetch(csvURL)
+            .then(response => response.text())
+            .then(csvText => {
+                Papa.parse(csvText, {
+                    header: true,
+                    skipEmptyLines: true,
+                    complete: resolve,
+                    error: reject
+                });
+            })
+            .catch(reject);
     });
 }
 
@@ -65,10 +70,10 @@ function displayTable(filteredData) {
                     if (isLastColumn) {
                         var sgpaValue = rowData[key].trim();
                         if (!isNaN(parseFloat(sgpaValue))) {
-        resultTable += " style='color: green'";
-    } else {
-        resultTable += " style='color: red'";
-    }
+                            resultTable += " style='color: green'";
+                        } else {
+                            resultTable += " style='color: red'";
+                        }
                     }
 
                     resultTable += ">" + rowData[key] + "</td>";
@@ -88,8 +93,6 @@ function displayTable(filteredData) {
         console.error("Element with ID 'tableContainer' not found.");
     }
 }
-
-
 
 // Function to search for and display data
 function searchAndDisplay() {
